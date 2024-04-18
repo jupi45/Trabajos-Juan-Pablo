@@ -1,0 +1,42 @@
+// Sketch de Processing con las siguientes características:
+// 1. Tamaño (size) de 600 x 600.
+// 2. Background de color gris (no blanco ni negro).
+// 3. Figura de elipse y rectángulo.
+// 4. Colores de las figuras distintos al background.
+// 5. Frase de texto.
+
+// Tamaño del lienzo
+size(600, 600);
+
+// Establecer el background a un color gris (#696969)
+background(#696969);
+
+// Definición de los colores para las figuras
+color fondo = color(255); // blanco
+color figuras = color(255, 0, 0); // rojo
+
+// Dibujado de las figuras
+// Se utiliza fill(miColor) para pintar el interior de la figura del color especificado
+// y stroke(miColor) para dibujar el contorno de la figura del color especificado
+
+// Se define una posición fija en el centro del lienzo
+int centroX = width/2;
+int centroY = height/2;
+
+// Se dibuja una elipse en el centro del lienzo
+fill(figuras);
+ellipse(centroX, centroY, 100, 100);
+
+// Se dibuja un rectángulo en el centro del lienzo
+stroke(figuras);
+rect(centroX-50, centroY, 100, 50);
+
+// Se dibuja una línea diagonal en el lienzo
+stroke(figuras);
+line(0, 0, width, height);
+
+// Se dibuja una línea de texto en el centro del lienzo
+fill(fondo);
+textSize(20);
+textAlign(CENTER, CENTER);
+text("¡Hola, mundo!", centroX, centroY);
